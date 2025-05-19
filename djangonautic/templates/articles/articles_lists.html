@@ -4,4 +4,15 @@
 
 <h1>Listes des Articles</h1>
 
+
+{% for article in articles %}
+
+    <div class="card">
+        <h2><a href="{% url 'detail' article.slug %}">{{article.title}}</a></h2>
+        <span>{{article.date}}</span>
+        <p>{{article.snippet}}</p>
+    </div>
+
+{% endfor %}
+
 {% endblock  %}
